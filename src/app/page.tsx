@@ -1,12 +1,14 @@
 import FormInput from "@/components/home/FormInput";
+import Output from "@/components/home/Output";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { BioProvideer } from "@/context/BioContext";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
-<main className="relative grid grid-cols-2 p-24">
+<main className="relative grid grid-cols-2 p-24 gap-12">
   <div className=" col-span-2 w-full flex flex-col items-center justify-center space-y-4 mb-4 text-center">
     <Link href="/">
     <AnimatedGradientText>
@@ -25,7 +27,10 @@ export default function Home() {
     <p className="text-lg text-[#9c40ff]">Just answer a few questions, and we'll generate a bio that captures who you are.</p>
   </div>
 
+ <BioProvideer>
   <FormInput/>
+  <Output/>
+  </BioProvideer>
 </main>
   );
 }
