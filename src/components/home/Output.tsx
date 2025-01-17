@@ -19,9 +19,9 @@ const Output= () => {
   {
     loading ?
     <Skeleton/> :
-    <ul className="flex flex-col justify-center items-center p-16 space-y-20">
+    <ul className="flex flex-col justify-center items-center p-8 pt-12 xs:p-12 lg:p-16 space-y-8 sm:space-y-12">
       {output?.data.map((data, index) => (
-        <li key={index} className="w-full bg-background p-4 rounded-md border border-primary/20 text-base relative">{data.bio}
+        <li key={index} className="w-full bg-background p-4 rounded-md border border-primary/20 text-sm xs:text-base relative">{data.bio}
         <span className="absolute bottom-2 top-[99%] right-0">
           <CopyLabel text={data.bio}/>
         </span>

@@ -1,6 +1,7 @@
 import FormInput from "@/components/home/FormInput";
 import Output from "@/components/home/Output";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { Cover } from "@/components/ui/cover";
 import { BioProvideer } from "@/context/BioContext";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
@@ -8,8 +9,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-<main className="relative grid grid-cols-2 p-24 gap-12">
-  <div className=" col-span-2 w-full flex flex-col items-center justify-center space-y-4 mb-4 text-center">
+<main className="relative grid grid-cols-1 slg:grid-cols-2 px-4 py-12 sm:py-16 sm:px-8 md:px-10 slg:px-16 lg:p-24 gap-12">
+  <div className=" col-span-full w-full flex flex-col items-center justify-center space-x-2 sm:space-y-4 mb-4 text-center">
     <Link href="/">
     <AnimatedGradientText>
         ✨ <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
@@ -23,14 +24,14 @@ export default function Home() {
         <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
       </AnimatedGradientText>
     </Link>
-    <h1 className="font-extrabold text-center text-7xl w-full lg:w-[90%] uppercase mx-auto pt-4">CRAFT THE PERFECT TWITTER BIO IN SENCONDS!</h1>
-    <p className="text-lg text-[#9c40ff]">Just answer a few questions, and we'll generate a bio that captures who you are.</p>
+    <h1 className="font-extrabold text-center text-4xl md:text-5xl slg:text-6xl lg:text-7xl w-full lg:w-[90%] uppercase mx-auto pt-4">CRAFT THE PERFECT TWITTER BIO IN <Cover>SENCONDS!</Cover></h1>
+    <p className="text-sm sm:text-base md:text-lg text-[#9c40ff]">Just answer a few questions, and we'll generate a bio that captures who you are.</p>
   </div>
 
  <BioProvideer>
   <FormInput/>
   <Output/>
-  </BioProvideer>
+  </BioProvideer>  
 </main>
   );
 }
