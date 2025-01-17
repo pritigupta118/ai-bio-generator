@@ -7,7 +7,7 @@ import { BorderBeam } from "../ui/border-beam";
 import { BioContext } from "@/context/BioContext";
 import { Skeleton } from "../ui/skeleton";
 import CopyLabel from "./CopyLabel";
-import AnimatedGradientText from "../ui/animated-gradient-text";
+
 
 const Output = () => {
   const { loading, output } = useContext(BioContext);
