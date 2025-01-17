@@ -25,7 +25,7 @@ import MetaIcon from "../icons/Meta"
 import MistralIcon from "../icons/Mistral"
 import { Slider } from "../ui/slider"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
-import { Info } from "lucide-react"
+import { Info, Loader2 } from "lucide-react"
 import { Textarea } from "../ui/textarea"
 import { Switch } from "../ui/switch";
 import { generateBio } from "@/app/actions"
@@ -319,8 +319,8 @@ return (
           </div>
         </fieldset>
 
-        <Button className="rounded" type="submit">
-          {/* {loading && <Loader2 className="w-4 h-4 mr-2 animate-spin" />} */}
+        <Button className="rounded" type="submit" disabled={loading}>
+          {loading && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
           Generate
         </Button>
       </form>
