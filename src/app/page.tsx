@@ -11,7 +11,7 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "BioGenie",
+  title: "BioWriter",
   description:
     "Generate your perfect Twitter bio with the help of AI. Just answer a few questions and let our AI craft a bio that truly represents you.",
 };
