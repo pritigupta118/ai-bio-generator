@@ -12,7 +12,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+
 
 import {
   Select,
@@ -29,7 +29,6 @@ import { Info, Loader2 } from "lucide-react"
 import { Textarea } from "../ui/textarea"
 import { Switch } from "../ui/switch";
 import { generateBio } from "@/app/actions"
-import { log } from "console"
 import { useContext } from "react"
 import { BioContext } from "@/context/BioContext"
 
